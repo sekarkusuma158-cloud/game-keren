@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GameZone</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>🎮 GameZone</h1>
+    <p>Tempat seru buat pecinta game!</p>
+  </header>
+
+  <!-- Navigasi -->
+  <nav>
+    <ul>
+      <li><a href="#">Beranda</a></li>
+      <li><a href="#">Game Populer</a></li>
+      <li><a href="#">Berita</a></li>
+      <li><a href="#">Kontak</a></li>
+    </ul>
+  </nav>
+
+  <!-- Konten utama -->
+  <main>
+    <section class="card">
+      <h2>🔥 Game Terbaru</h2>
+      <p>Update setiap minggu, jangan sampai ketinggalan!</p>
+    </section>
+
+    <section class="card">
+      <h2>⭐ Game Favorit</h2>
+      <p>Kumpulan game terbaik pilihan komunitas.</p>
+    </section>
+
+    <section class="card">
+      <h2>⚡ Event & Turnamen</h2>
+      <p>Ikuti event seru dengan hadiah menarik!</p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 GameZone - Dibuat dengan sekar heeseung</p>
+  </footer>
+
+  <!-- Elemen bergerak -->
+  <div class="floating">👾</div>
+  <div class="floating2">⭐</div>
+  <div class="floating3">🎲</div>
+
+  <!-- Musik chiptune -->
+  <audio id="bg-music" loop>
+    <source src="MONTAGEM XONADA (Slowed)_musicaldown.com_1758448842.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Tombol kontrol musik -->
+  <div class="music-control">
+    <button onclick="toggleMusic()">🎵 Play / Pause</button>
+  </div>
+
+  <script>
+    const music = document.getElementById("bg-music");
+    function toggleMusic() {
+      if (music.paused) {
+        music.play();
+      } else {
+        music.pause();
+      }
+    }
+  </script>
+</body>
+</html>
