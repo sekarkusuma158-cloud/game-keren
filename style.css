@@ -1,0 +1,144 @@
+/* simpan file ini dengan nama style.css */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Press Start 2P', cursive;
+  background: linear-gradient(135deg, #1e1f26, #2a2d3e, #232946);
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 2rem;
+  background: #ff006e;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  animation: neon 1.5s infinite alternate;
+}
+
+/* Navigasi */
+nav {
+  background: #3a0ca3;
+  padding: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #ffbe0b;
+}
+
+/* Konten */
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.card {
+  background: #7209b7;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05) rotate(-2deg);
+  background: #ff006e;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #3a0ca3;
+  margin-top: 2rem;
+}
+
+/* Animasi neon */
+@keyframes neon {
+  from { text-shadow: 0 0 5px #fff, 0 0 10px #ffbe0b, 0 0 20px #ff006e; }
+  to { text-shadow: 0 0 20px #fff, 0 0 30px #ffbe0b, 0 0 40px #ff006e; }
+}
+
+/* Elemen bergerak */
+.floating, .floating2, .floating3 {
+  position: absolute;
+  font-size: 2.5rem;
+  animation: float 6s infinite ease-in-out;
+}
+
+.floating {
+  top: 80%;
+  left: 10%;
+  animation-duration: 5s;
+}
+
+.floating2 {
+  top: 60%;
+  right: 15%;
+  animation-duration: 7s;
+}
+
+.floating3 {
+  top: 30%;
+  left: 50%;
+  animation-duration: 9s;
+}
+
+@keyframes float {
+  0% { transform: translateY(0) rotate(0deg); opacity: 0.8; }
+  50% { transform: translateY(-40px) rotate(20deg); opacity: 1; }
+  100% { transform: translateY(0) rotate(0deg); opacity: 0.8; }
+}
+
+.music-control {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #ff006e;
+  padding: 10px 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.music-control button {
+  background: #3a0ca3;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-family: 'Press Start 2P', cursive;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.music-control button:hover {
+  background: #ffbe0b;
+  color: #000;
+}
